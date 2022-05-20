@@ -7,5 +7,7 @@ CLASSES_PATH = os.path.join(
 COMPONENTS_PATH = os.path.join(
     PROJECT_PATH, "components"
 )
-sys.path.append(COMPONENTS_PATH)
-sys.path.append(CLASSES_PATH)
+if COMPONENTS_PATH not in sys.path:
+    sys.path.append(COMPONENTS_PATH)
+if CLASSES_PATH not in sys.path:
+    sys.path.append(CLASSES_PATH)
